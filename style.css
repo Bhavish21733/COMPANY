@@ -1,25 +1,28 @@
-/* Reset */
-html {
-  scroll-behavior: smooth;
-}
-
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #fdfdfd;
-  color: #333;
+html {
+  scroll-behavior: smooth;
 }
 
-/* Containers */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Container */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+  padding: 20px 0;
 }
 
 /* Header */
@@ -27,12 +30,17 @@ header {
   background: #002f4b;
   padding: 20px 0;
   color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -46,6 +54,7 @@ nav a {
   font-weight: 500;
   color: #ffffffcc;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 nav a:hover {
@@ -57,7 +66,8 @@ nav a:hover {
   background: linear-gradient(90deg, #002f4b, #00547a);
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
+  animation: fadeIn 1s ease-in;
 }
 
 .hero h1 {
@@ -76,12 +86,14 @@ nav a:hover {
   padding: 12px 25px;
   border-radius: 25px;
   font-weight: bold;
-  transition: 0.3s;
+  transition: all 0.3s ease;
   text-decoration: none;
+  display: inline-block;
 }
 
 .btn:hover {
   background: #ffc107;
+  transform: scale(1.05);
 }
 
 /* Quick Links */
@@ -89,6 +101,7 @@ nav a:hover {
   padding: 40px 20px;
   background: #e9f0f7;
   text-align: center;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .quick-links h2 {
@@ -98,40 +111,39 @@ nav a:hover {
 }
 
 .link-list {
-  list-style: none;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
+  list-style: none;
 }
 
 .link-list li a {
-  display: inline-block;
   padding: 10px 20px;
-  background-color: #00547a;
+  background: #00547a;
   color: white;
   border-radius: 8px;
   font-weight: 500;
-  transition: background 0.3s;
+  transition: 0.3s ease;
   text-decoration: none;
 }
 
 .link-list li a:hover {
   background-color: #f9a825;
-  color: #000;
+  color: black;
 }
 
 /* Services */
 .services {
-  padding: 60px 20px;
   background: #f8f9fa;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .services h2 {
   font-size: 2rem;
   margin-bottom: 30px;
+  color: #002f4b;
 }
 
 .service-grid {
@@ -148,6 +160,12 @@ nav a:hover {
   width: 300px;
   border-radius: 10px;
   text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
 }
 
 /* Projects */
@@ -162,7 +180,6 @@ nav a:hover {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  margin-top: 30px;
 }
 
 .project-item {
@@ -171,12 +188,17 @@ nav a:hover {
   width: 300px;
   border-radius: 10px;
   border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
 }
 
 /* Why Us */
 .why-us {
   padding: 60px 20px;
-  background: #fff;
+  background: #ffffff;
   text-align: center;
 }
 
@@ -188,8 +210,8 @@ nav a:hover {
 
 /* Contact */
 .contact {
-  padding: 60px 20px;
   background: #f1f1f1;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -209,13 +231,18 @@ nav a:hover {
   font-size: 1.2rem;
   color: #0073e6;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
 footer {
   background-color: #002f4b;
   color: white;
-  padding: 40px 20px 10px 20px;
+  padding: 40px 20px 10px;
 }
 
 .footer-content {
@@ -241,7 +268,7 @@ footer {
 }
 
 .footer-content ul li a:hover {
-  color: #fff;
+  color: white;
 }
 
 .footer-bottom {
@@ -249,6 +276,19 @@ footer {
   padding-top: 20px;
   border-top: 1px solid #444;
   margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */
@@ -258,17 +298,15 @@ footer {
     align-items: flex-start;
   }
 
-  .footer-content {
-    flex-direction: column;
-  }
-
-  .service-grid,
-  .project-list {
-    flex-direction: column;
-  }
-
   nav a {
     display: block;
     margin: 10px 0;
+  }
+
+  .footer-content,
+  .service-grid,
+  .project-list {
+    flex-direction: column;
+    align-items: center;
   }
 }
