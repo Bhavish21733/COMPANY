@@ -1,227 +1,41 @@
-/* CSS for Macha IT Solutions */
+// Sticky Navbar on scroll
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 0);
+});
 
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+// Toggle counter animation for project completion
+document.addEventListener("DOMContentLoaded", () => {
+  const counter = document.querySelector("#project-counter");
+  let started = false;
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-  line-height: 1.6;
-}
+  const countUp = () => {
+    let count = 0;
+    const target = +counter.getAttribute("data-target");
+    const interval = setInterval(() => {
+      count++;
+      counter.textContent = count + "+";
+      if (count >= target) clearInterval(interval);
+    }, 50);
+  };
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+  window.addEventListener("scroll", () => {
+    const triggerTop = counter.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
 
-/* Header */
-header {
-  background: #002f4b;
-  padding: 20px 0;
-  color: white;
-}
+    if (!started && triggerTop < windowHeight) {
+      started = true;
+      countUp();
+    }
+  });
+});
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #f9a825;
-}
-
-nav a {
-  margin-left: 20px;
-  font-weight: 500;
-  color: #ffffffcc;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #f9a825;
-}
-
-/* Hero */
-.hero {
-  background: linear-gradient(90deg, #002f4b, #00547a);
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  animation: fadeInDown 1s ease-in-out;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-}
-
-.btn {
-  background: #f9a825;
-  color: black;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s ease-in-out;
-}
-
-.btn:hover {
-  background: #ffc107;
-}
-
-/* About */
-.about {
-  padding: 60px 20px;
-  background-color: white;
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.about p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Services */
-.services {
-  background: #e9f0f7;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.services h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.service-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.service-card {
-  background: white;
-  padding: 20px;
-  width: 280px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Projects */
-.projects {
-  background: #fff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.project-item {
-  background: #f1f1f1;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.project-item:hover {
-  background: #dfe6ec;
-}
-
-/* Contact */
-.contact {
-  padding: 60px 20px;
-  background-color: #f8f9fa;
-  text-align: center;
-}
-
-.contact ul {
-  list-style: none;
-  margin: 20px 0;
-}
-
-.contact ul li {
-  margin-bottom: 8px;
-}
-
-.email-link {
-  color: #0073e6;
-  font-weight: bold;
-}
-
-/* Footer */
-footer {
-  background: #002f4b;
-  color: white;
-  padding: 40px 20px;
-}
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.footer-content h4 {
-  color: #f9a825;
-  margin-bottom: 10px;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #555;
-}
-
-/* Animations */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footer-content,
-  .service-grid {
-    flex-direction: column;
-  }
-  nav a {
-    margin: 10px 0;
-  }
-}
+// Smooth Scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
