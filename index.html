@@ -2,23 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Macha IT Solutions</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
 
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <p>Contact: <a href="tel:+918688641066">8688641066</a> | Thotapalem, Vizianagaram, India</p>
+  </div>
+
   <!-- Header -->
-  <header>
-    <div class="container nav-container">
+  <header class="header">
+    <div class="container">
       <div class="logo">Macha IT Solutions</div>
-      <nav>
+      <nav class="nav">
         <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#projects">Our Work</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#team">Team</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -27,63 +31,44 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="container">
-      <h1>Empowering Businesses with Smart Digital Tech</h1>
-      <p>We deliver expert Digital Marketing, Web Development, and Project Services for students and businesses.</p>
-      <a href="#contact" class="btn">Get a Free Quote</a>
+      <h1>Smart Digital Technology for Your Business</h1>
+      <p>Expertise in Digital Marketing, Web Development, and Student Projects</p>
+      <a href="#contact" class="btn">Get Started</a>
     </div>
   </section>
 
-  <!-- Quick Links -->
-  <section class="quick-links">
+  <!-- About Us -->
+  <section id="about" class="about">
     <div class="container">
-      <h2>Quick Navigation</h2>
-      <ul class="link-list">
-        <li><a href="#home">🏠 Home</a></li>
-        <li><a href="#services">🛠 Services</a></li>
-        <li><a href="#projects">💼 Our Work</a></li>
-        <li><a href="#why-us">❓ Why Us</a></li>
-        <li><a href="#team">👨‍💻 Team</a></li>
-        <li><a href="#contact">📞 Contact</a></li>
-      </ul>
+      <h2>About Us</h2>
+      <p>Macha IT Solutions is founded by <strong>Bhavish Lakkavarapu</strong>. We are a team of 4 enthusiastic graduates providing solutions in web development, digital marketing, and engineering projects. We’ve successfully completed <span id="project-count">3</span>+ projects and growing rapidly.</p>
     </div>
   </section>
 
   <!-- Services -->
   <section id="services" class="services">
     <div class="container">
-      <h2>What We Do</h2>
-      <div class="service-grid">
-        <div class="service-card">
-          <h3>Digital Marketing</h3>
-          <p>SEO, Google Ads, Content Strategy, Social Media Growth, Email Campaigns.</p>
-        </div>
-        <div class="service-card">
+      <h2>Our Services</h2>
+      <div class="service-list">
+        <div class="service">
           <h3>Web Development</h3>
-          <p>Custom websites, responsive design, portfolio and e-commerce platforms.</p>
+          <p>Custom websites, portfolios, responsive designs, and e-commerce platforms.</p>
         </div>
-        <div class="service-card">
+        <div class="service">
+          <h3>Digital Marketing</h3>
+          <p>SEO, Social Media, Google Ads, Branding and Outreach strategies.</p>
+        </div>
+        <div class="service">
           <h3>Final Year Projects</h3>
-          <p>Guided project development for engineering and CS students using latest technologies.</p>
+          <p>Mini and Major Projects for Engineering Students with complete guidance.</p>
         </div>
-        <div class="service-card">
-          <h3>Graphic Design</h3>
-          <p>Posters, logos, branding and UI/UX design for web and mobile.</p>
+        <div class="service">
+          <h3>UI/UX Design</h3>
+          <p>Modern user interface design for mobile apps and web applications.</p>
         </div>
-        <div class="service-card">
-          <h3>Mobile App Development</h3>
-          <p>Cross-platform mobile applications using Flutter and React Native.</p>
-        </div>
-        <div class="service-card">
-          <h3>Domain & Hosting</h3>
-          <p>Assistance with domain registration and secure hosting setup.</p>
-        </div>
-        <div class="service-card">
-          <h3>Resume & Portfolio Building</h3>
-          <p>Professional resume design and personal portfolio development.</p>
-        </div>
-        <div class="service-card">
-          <h3>Internship Guidance</h3>
-          <p>Help with real-time projects, training, and documentation for internships.</p>
+        <div class="service">
+          <h3>Consulting</h3>
+          <p>Startup IT consultation and website launch assistance.</p>
         </div>
       </div>
     </div>
@@ -92,90 +77,29 @@
   <!-- Projects -->
   <section id="projects" class="projects">
     <div class="container">
-      <h2>Our Recent Work</h2>
-      <div class="project-list">
-        <div class="project-item">
-          <h4>Startup Landing Page</h4>
-          <p>Designed and deployed a responsive startup website for a tech company.</p>
-        </div>
-        <div class="project-item">
-          <h4>Student Project Portal</h4>
-          <p>Built a Django-based system for managing final year project submissions.</p>
-        </div>
-        <div class="project-item">
-          <h4>Marketing Campaign</h4>
-          <p>Handled SEO and paid ads for a local business, increasing leads by 250%.</p>
-        </div>
+      <h2>Completed Projects</h2>
+      <div class="project-gallery">
+        <div class="project">Student Project Portal (Django)</div>
+        <div class="project">Business Marketing Campaign</div>
+        <div class="project">Startup Website (Responsive)</div>
       </div>
-      <div class="toggle-success">
-        <button class="btn" onclick="toggleCompleted()">+ Completed 3+ Successful Projects</button>
-        <div id="completed-info" style="display: none; margin-top: 10px;">
-          Our team has successfully delivered more than 3 impactful projects across various domains.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Us -->
-  <section id="why-us" class="why-us">
-    <div class="container">
-      <h2>Why Macha IT?</h2>
-      <ul>
-        <li>Real industry-level quality and support</li>
-        <li>Affordable rates for students and startups</li>
-        <li>Quick delivery with full transparency</li>
-        <li>Custom solutions and real-time updates</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Team -->
-  <section id="team" class="team">
-    <div class="container">
-      <h2>Our Team</h2>
-      <ul class="team-list">
-        <li><strong>Founder:</strong> Bhavish Lakkavarapu</li>
-        <li>Yashwanth</li>
-        <li>Raju</li>
-      </ul>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2>Let's Work Together</h2>
-      <p>Email: <a class="email-link" href="mailto:bhavishlakkavarapu@gmail.com">bhavishlakkavarapu@gmail.com</a></p>
-      <p>Phone: <a href="tel:+918688641066">+91 8688641066</a></p>
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:bhavishlakkavarapu@gmail.com">bhavishlakkavarapu@gmail.com</a></p>
+      <p>Phone: <a href="tel:+918688641066">8688641066</a></p>
       <p>Address: Thotapalem, Vizianagaram, India</p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="container footer-content">
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Our Work</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>Email: <a href="mailto:bhavishlakkavarapu@gmail.com">bhavishlakkavarapu@gmail.com</a></p>
-        <p>Phone: +91 8688641066</p>
-      </div>
-      <div>
-        <h4>Follow Us</h4>
-        <p>Coming soon: Instagram, LinkedIn, GitHub</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Macha IT Solutions. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Macha IT Solutions. All rights reserved.</p>
     </div>
   </footer>
 
