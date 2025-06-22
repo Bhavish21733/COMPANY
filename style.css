@@ -1,8 +1,6 @@
-/* Reset */
-html {
-  scroll-behavior: smooth;
-}
+/* CSS for Macha IT Solutions */
 
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -11,15 +9,15 @@ html {
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #fdfdfd;
+  background-color: #f8f9fa;
   color: #333;
+  line-height: 1.6;
 }
 
-/* Containers */
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 /* Header */
@@ -33,6 +31,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -57,12 +56,13 @@ nav a:hover {
   background: linear-gradient(90deg, #002f4b, #00547a);
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 15px;
+  animation: fadeInDown 1s ease-in-out;
 }
 
 .hero p {
@@ -76,56 +76,36 @@ nav a:hover {
   padding: 12px 25px;
   border-radius: 25px;
   font-weight: bold;
-  transition: 0.3s;
   text-decoration: none;
+  transition: 0.3s ease-in-out;
 }
 
 .btn:hover {
   background: #ffc107;
 }
 
-/* Quick Links */
-.quick-links {
-  padding: 40px 20px;
-  background: #e9f0f7;
+/* About */
+.about {
+  padding: 60px 20px;
+  background-color: white;
   text-align: center;
 }
 
-.quick-links h2 {
-  font-size: 1.8rem;
+.about h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
-  color: #002f4b;
 }
 
-.link-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-
-.link-list li a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #00547a;
-  color: white;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: background 0.3s;
-  text-decoration: none;
-}
-
-.link-list li a:hover {
-  background-color: #f9a825;
-  color: #000;
+.about p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* Services */
 .services {
+  background: #e9f0f7;
   padding: 60px 20px;
-  background: #f8f9fa;
   text-align: center;
 }
 
@@ -137,142 +117,98 @@ nav a:hover {
 .service-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  gap: 20px;
 }
 
 .service-card {
   background: white;
-  border: 1px solid #ddd;
-  padding: 25px;
-  width: 300px;
+  padding: 20px;
+  width: 280px;
   border-radius: 10px;
-  text-align: left;
-  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Projects */
 .projects {
+  background: #fff;
   padding: 60px 20px;
-  background-color: #fff;
   text-align: center;
-}
-
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 30px;
 }
 
 .project-item {
-  background: #f8f8f8;
+  background: #f1f1f1;
   padding: 20px;
-  width: 300px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
+  margin: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-/* Why Us */
-.why-us {
-  padding: 60px 20px;
-  background: #fff;
-  text-align: center;
-}
-
-.why-us ul {
-  list-style: none;
-  font-size: 1.1rem;
-  margin-top: 20px;
-}
-
-/* Toggle Projects */
-.toggle-section {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #eef;
-}
-
-.toggle-section .count {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #f9a825;
+.project-item:hover {
+  background: #dfe6ec;
 }
 
 /* Contact */
 .contact {
   padding: 60px 20px;
-  background: #f1f1f1;
+  background-color: #f8f9fa;
   text-align: center;
 }
 
-.team-list {
+.contact ul {
   list-style: none;
-  padding: 0;
   margin: 20px 0;
-  font-size: 1.1rem;
-  font-weight: 500;
 }
 
-.team-list li {
-  margin: 5px 0;
+.contact ul li {
+  margin-bottom: 8px;
 }
 
 .email-link {
-  font-size: 1.2rem;
   color: #0073e6;
   font-weight: bold;
 }
 
-.contact-info {
-  margin-top: 15px;
-  font-size: 1rem;
-}
-
 /* Footer */
 footer {
-  background-color: #002f4b;
+  background: #002f4b;
   color: white;
-  padding: 40px 20px 10px 20px;
+  padding: 40px 20px;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 30px;
 }
 
 .footer-content h4 {
-  margin-bottom: 10px;
   color: #f9a825;
-}
-
-.footer-content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-content ul li a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-.footer-content ul li a:hover {
-  color: #fff;
+  margin-bottom: 10px;
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
-  border-top: 1px solid #444;
-  margin-top: 20px;
+  border-top: 1px solid #555;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */
@@ -281,18 +217,11 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .footer-content {
+  .footer-content,
+  .service-grid {
     flex-direction: column;
   }
-
-  .service-grid,
-  .project-list {
-    flex-direction: column;
-  }
-
   nav a {
-    display: block;
     margin: 10px 0;
   }
 }
