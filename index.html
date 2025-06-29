@@ -33,6 +33,7 @@
 
     header h1 {
       font-size: 1.8rem;
+      cursor: pointer;
     }
 
     nav a {
@@ -41,6 +42,7 @@
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s;
+      cursor: pointer;
     }
 
     nav a:hover {
@@ -110,11 +112,11 @@
 
 <body>
   <header>
-    <h1>Cendentic Technologies</h1>
+    <h1 onclick="scrollToTop()">Cendentic Technologies</h1>
     <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a onclick="scrollToSection('services')">Services</a>
+      <a onclick="scrollToSection('about')">About</a>
+      <a onclick="scrollToSection('contact')">Contact</a>
     </nav>
   </header>
 
@@ -168,6 +170,16 @@
   <footer>
     <p>&copy; 2025 Cendentic Technologies. All rights reserved.</p>
   </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 
 </html>
