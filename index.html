@@ -5,181 +5,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cendentic Technologies</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background-color: #f8f9fa;
-      color: #212529;
-    }
-
-    header {
-      background-color: #1e1e2f;
-      padding: 1rem 2rem;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 2rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-      cursor: pointer;
-    }
-
-    nav a:hover {
-      color: #00bcd4;
-    }
-
-    .hero {
-      background: linear-gradient(to right, #1e1e2f, #4e4e7f);
-      color: white;
-      padding: 4rem 2rem;
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    section {
-      padding: 4rem 2rem;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .service {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s;
-    }
-
-    .service:hover {
-      transform: translateY(-5px);
-    }
-
-    .service h3 {
-      color: #1e1e2f;
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      background-color: #1e1e2f;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
-    <h1 onclick="scrollToTop()">Cendentic Technologies</h1>
+    <div class="logo-container">
+      <img src="assets/images/logo.png" alt="Cendentic Technologies Logo" class="logo">
+      <div class="company-text">
+        <h1>Cendentic Technologies</h1>
+        <p class="tagline">Creative Engineers Developing Efficient Next-gen Technology, Innovation & Consulting</p>
+      </div>
+    </div>
     <nav>
-      <a onclick="scrollToSection('services')">Services</a>
-      <a onclick="scrollToSection('about')">About</a>
-      <a onclick="scrollToSection('contact')">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>Innovating the Future with Tech Excellence</h2>
-    <p>We empower businesses and individuals through modern tech solutions including Web Development, AI, Final Year Projects, and Digital Services.</p>
+    <h2>Building Smart Tech Solutions for a Smarter Tomorrow</h2>
+    <p>Empowering startups, enterprises, and students with cutting-edge solutions in Web, AI, BPO, Consulting, and more.</p>
   </section>
 
-  <section id="services">
-    <h2 style="text-align: center; margin-bottom: 2rem;">Our Services</h2>
-    <div class="services">
-      <div class="service">
+  <section class="quick-services">
+    <h2>What We Do</h2>
+    <div class="cards">
+      <div class="card">
         <h3>Web Development</h3>
-        <p>Responsive, optimized, and modern websites tailored for every business need.</p>
+        <p>Custom, responsive, and high-performance websites built using modern stacks.</p>
       </div>
-      <div class="service">
-        <h3>Final Year Projects</h3>
-        <p>Custom academic project support with documentation and deployment.</p>
-      </div>
-      <div class="service">
-        <h3>Internships</h3>
-        <p>Structured and guided internship programs with real-world experience.</p>
-      </div>
-      <div class="service">
-        <h3>Digital Marketing</h3>
-        <p>Grow your digital presence through SEO, social media, and campaigns.</p>
-      </div>
-      <div class="service">
+      <div class="card">
         <h3>AI & Prompt Engineering</h3>
-        <p>Custom AI solutions and prompt optimization using the latest technologies.</p>
+        <p>Solutions that harness the power of artificial intelligence and LLMs for business innovation.</p>
       </div>
-      <div class="service">
-        <h3>Data Management</h3>
-        <p>Organize, analyze, and secure your data with intelligent data strategies.</p>
+      <div class="card">
+        <h3>Final Year Projects</h3>
+        <p>Guided academic projects with complete documentation, source code, and training.</p>
+      </div>
+      <div class="card">
+        <h3>Internships & Trainings</h3>
+        <p>Industry-standard training in Web, AI, Cloud, and more with live projects and certifications.</p>
+      </div>
+      <div class="card">
+        <h3>BPO & Business Consulting</h3>
+        <p>Cost-effective and scalable BPO services with expert process improvement strategies.</p>
+      </div>
+      <div class="card">
+        <h3>Digital Marketing</h3>
+        <p>SEO, campaigns, and social media strategies to boost visibility and conversions.</p>
+      </div>
+      <div class="card">
+        <h3>Data Analytics</h3>
+        <p>Turning your data into powerful business insights and reports using analytics tools.</p>
       </div>
     </div>
-  </section>
-
-  <section id="about">
-    <h2 style="text-align: center; margin-bottom: 2rem;">About Us</h2>
-    <p style="max-width: 800px; margin: auto; font-size: 1.1rem; line-height: 1.6; text-align: center;">
-      Cendentic Technologies is a startup formed by four passionate computer science graduates aiming to provide impactful tech solutions and real-time project exposure to students and businesses. We believe in innovation, teamwork, and delivering quality.
-    </p>
-  </section>
-
-  <section id="contact">
-    <h2 style="text-align: center; margin-bottom: 2rem;">Contact Us</h2>
-    <p style="text-align: center; font-size: 1.1rem;">Reach us at: <strong>contact@cendentic.tech</strong> | +91-98765-43210</p>
   </section>
 
   <footer>
     <p>&copy; 2025 Cendentic Technologies. All rights reserved.</p>
   </footer>
 
-  <script>
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
