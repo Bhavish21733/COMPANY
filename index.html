@@ -1,107 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Macha IT Solutions</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <title>Cendentic Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+
+    header {
+      background-color: #1e1e2f;
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #1e1e2f, #4e4e7f);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .service {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service h3 {
+      color: #1e1e2f;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #1e1e2f;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
 </head>
+
 <body>
-
-  <!-- Top Bar -->
-  <div class="top-bar">
-    <p>Contact: <a href="tel:+918688641066">8688641066</a> | Thotapalem, Vizianagaram, India</p>
-  </div>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="logo">Macha IT Solutions</div>
-      <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <h1>Cendentic Technologies</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container">
-      <h1>Smart Digital Technology for Your Business</h1>
-      <p>Expertise in Digital Marketing, Web Development, and Student Projects</p>
-      <a href="#contact" class="btn">Get Started</a>
-    </div>
+  <section class="hero">
+    <h2>Innovating the Future with Tech Excellence</h2>
+    <p>We empower businesses and individuals through modern tech solutions including Web Development, AI, Final Year Projects, and Digital Services.</p>
   </section>
 
-  <!-- About Us -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>Macha IT Solutions is founded by <strong>Bhavish Lakkavarapu</strong>. We are a team of 4 enthusiastic graduates providing solutions in web development, digital marketing, and engineering projects. We’ve successfully completed <span id="project-count">3</span>+ projects and growing rapidly.</p>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="service-list">
-        <div class="service">
-          <h3>Web Development</h3>
-          <p>Custom websites, portfolios, responsive designs, and e-commerce platforms.</p>
-        </div>
-        <div class="service">
-          <h3>Digital Marketing</h3>
-          <p>SEO, Social Media, Google Ads, Branding and Outreach strategies.</p>
-        </div>
-        <div class="service">
-          <h3>Final Year Projects</h3>
-          <p>Mini and Major Projects for Engineering Students with complete guidance.</p>
-        </div>
-        <div class="service">
-          <h3>UI/UX Design</h3>
-          <p>Modern user interface design for mobile apps and web applications.</p>
-        </div>
-        <div class="service">
-          <h3>Consulting</h3>
-          <p>Startup IT consultation and website launch assistance.</p>
-        </div>
+  <section id="services">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Web Development</h3>
+        <p>Responsive, optimized, and modern websites tailored for every business need.</p>
+      </div>
+      <div class="service">
+        <h3>Final Year Projects</h3>
+        <p>Custom academic project support with documentation and deployment.</p>
+      </div>
+      <div class="service">
+        <h3>Internships</h3>
+        <p>Structured and guided internship programs with real-world experience.</p>
+      </div>
+      <div class="service">
+        <h3>Digital Marketing</h3>
+        <p>Grow your digital presence through SEO, social media, and campaigns.</p>
+      </div>
+      <div class="service">
+        <h3>AI & Prompt Engineering</h3>
+        <p>Custom AI solutions and prompt optimization using the latest technologies.</p>
+      </div>
+      <div class="service">
+        <h3>Data Management</h3>
+        <p>Organize, analyze, and secure your data with intelligent data strategies.</p>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Completed Projects</h2>
-      <div class="project-gallery">
-        <div class="project">Student Project Portal (Django)</div>
-        <div class="project">Business Marketing Campaign</div>
-        <div class="project">Startup Website (Responsive)</div>
-      </div>
-    </div>
+  <section id="about">
+    <h2 style="text-align: center; margin-bottom: 2rem;">About Us</h2>
+    <p style="max-width: 800px; margin: auto; font-size: 1.1rem; line-height: 1.6; text-align: center;">
+      Cendentic Technologies is a startup formed by four passionate computer science graduates aiming to provide impactful tech solutions and real-time project exposure to students and businesses. We believe in innovation, teamwork, and delivering quality.
+    </p>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:bhavishlakkavarapu@gmail.com">bhavishlakkavarapu@gmail.com</a></p>
-      <p>Phone: <a href="tel:+918688641066">8688641066</a></p>
-      <p>Address: Thotapalem, Vizianagaram, India</p>
-    </div>
+  <section id="contact">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Contact Us</h2>
+    <p style="text-align: center; font-size: 1.1rem;">Reach us at: <strong>contact@cendentic.tech</strong> | +91-98765-43210</p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Macha IT Solutions. All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 Cendentic Technologies. All rights reserved.</p>
   </footer>
-
 </body>
+
 </html>
