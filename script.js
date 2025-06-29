@@ -1,28 +1,17 @@
-// JS for future enhancements (smooth scroll or mobile menu)
+// Smooth Scroll for anchor links
+window.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".nav-links a");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll("a[href^='#']");
-
-  links.forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      if (link.getAttribute("href").startsWith("#")) {
+        e.preventDefault();
+        const targetId = link.getAttribute("href");
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
   });
-
-  // Example mobile nav toggle setup (you can activate later)
-  const navToggle = document.querySelector(".mobile-nav-toggle");
-  const navMenu = document.querySelector("nav");
-
-  if (navToggle) {
-    navToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("open");
-    });
-  }
 });
